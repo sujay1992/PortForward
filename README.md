@@ -1,14 +1,15 @@
 # Multithreaded TCP Port Forwarder
 
-A lightweight, multithreaded TCP port forwarder written in C++ with both Windows and Linux implementations. Supports multiple forwarding rules, each mapping a local listening port to a remote host:port. Configuration is read from `pf_settings.txt`.
+A lightweight, multithreaded TCP port forwarder written in C++ with both Windows and Linux implementations. Supports multiple forwarding rules, each mapping a local listening port to a remote host:port. Configuration is read from `settings.txt`.
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `PortForward.cpp` | Windows implementation (Winsock2, Win32 threads) |
-| `port_forward_linux.cpp` | Linux implementation (POSIX sockets, pthreads) |
-| `settings.txt` | Configuration file (shared format for both platforms) |
+| `windows/PortForward/PortForward.cpp` | Windows implementation (Winsock2, Win32 threads) |
+| `linux/port_forward_linux.cpp` | Linux implementation (POSIX sockets, pthreads) |
+| `windows/PortForward/settings.txt` | Configuration file (Windows) |
+| `linux/settings.txt` | Configuration file (Linux) |
 
 ## Features
 
